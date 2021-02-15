@@ -1,0 +1,24 @@
+extends layout.pug
+block style
+    link(rel="stylesheet", href="style.css")
+block content
+    h2#Title Library
+    //- form.search-form(action='/search' method='post')
+    input.search(name="code" type='text' placeholder='Equity code')
+        //- button(type="submit") Check
+    ul.suggestions
+        li Filter for a code
+            
+    canvas(id='myChart'  width="100" height="20")
+    if(data)
+        each time in data['Time Series (30min)']
+            h5 #{time['1. open']} 
+            h5 #{time['1. high']} 
+            h5 #{time['1. low']} 
+            h5 #{time['1. close']} 
+            h5 #{time['1. volume']} 
+        //- h5 #{data['Time Series (30min)']}
+    
+block script
+    script(defer src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0")
+    script(defer src="/script.js")

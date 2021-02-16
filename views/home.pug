@@ -2,12 +2,38 @@ extends layout.pug
 block style
     link(rel="stylesheet", href="style.css")
 block content
-    input.search(name="code" type='text' placeholder='Equity code')
+
+    #Search 
+        h5 Enter Code and Press Enter
+        input.search(name="code" type='text' placeholder='Equity code')
     #graph        
         div#date 
-            h5 
         canvas(id='myChart' )
     
+    .intro 
+        .text 
+            h5.tagline What is SMAnalytics?
+            p.desc SMAnalytics is a web app which tracks analytics of stock market 
+        .image 
+            img(src="card 1.jpg", alt="image")
+
+    .intro 
+        .text 
+            h5.tagline How to use?
+            p.desc SMAnalytics is  very Simple to use. You just have to put the equity code (for example MSFT fot microsoft) and remember it is case sensitive. You can find the code easily by searching on google. Then press Enter 
+        .image 
+            img(src="card 2.jpg", alt="image")
+    .intro 
+        .text 
+            h5.tagline Getting Error?
+            p.desc 
+                |If you get error  
+                span.special "try after sometime"
+                | that means the api calls per minute have expired. If you get error 
+                span.special "wrong equity code"
+                | that means the code is wrong.
+        .image 
+            img(src="card 3.jpg", alt="image")
 block script
     script(defer src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0")
     script(defer src="/script.js")

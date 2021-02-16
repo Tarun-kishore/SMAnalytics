@@ -1,75 +1,111 @@
-html {
-    box-sizing: border-box;
-    background: #ffc600;
-    font-family: 'helvetica neue';
-    font-size: 20px;
-    font-weight: 200;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  input {
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .search-form {
-    max-width: 400px;
-    margin: 50px auto;
-  }
-  
-  input.search {
-    margin: 0;
-    text-align: center;
-    outline: 0;
-    border: 10px solid #F7F7F7;
-    width: 120%;
-    left: -10%;
-    position: relative;
-    top: 10px;
-    z-index: 2;
-    border-radius: 5px;
-    font-size: 40px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
-  }
-  
-  .suggestions {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    /*perspective: 20px;*/
-  }
-  
-  .suggestions li {
-    background: white;
-    list-style: none;
-    border-bottom: 1px solid #D8D8D8;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
-    margin: 0;
-    padding: 20px;
-    transition: background 0.2s;
-    display: flex;
-    justify-content: space-between;
-    text-transform: capitalize;
-  }
-  
-  .suggestions li:nth-child(even) {
-    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
-    background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
-  }
-  
-  .suggestions li:nth-child(odd) {
-    transform: perspective(100px) rotateX(-3deg) translateY(3px);
-    background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
-  }
-  
-  span.population {
-    font-size: 15px;
-  }
-  
-  .hl {
-    background: #ffc600;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Pacifico&family=Ranchers&family=Reggae+One&display=swap');
+
+*{
+  margin : 0;
+  padding : 0;
+}
+body{
+  background-color: #dad0aa;
+}
+
+#navbar{
+  background-color: #ab8c8c;
+  height:8vw;
+}
+#footer{
+  position: relative;
+  bottom: 0px;
+  background-color: #ab8c8c;
+  height:3vw;
+  width: 100vw;
+  color: black;
+  text-align: center;
+  /* justify-content: center; */
+  font-size: 1vw;
+  margin-top: 2vw;
+  padding-top: 2vw;
+}
+
+#navbar ul li a{
+  color: #942f2f;
+  font-family: 'Ranchers', cursive;
+  font-size: 5vw;
+  text-decoration: none;
+  padding: 1vw 1vw;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+.intro{
+  display: grid;
+  grid-template-columns: 3fr 1fr ;
+  padding: 1vw 4vw;
+  margin: 2vw 8vw;
+  box-shadow: 1vw 1vw 1vw #652c2c;
+  background-color: #f1d0d0;
+}
+.tagline{
+  padding: 1vw;
+  font-size: 3vw;
+  font-family: 'Reggae One', cursive;
+}
+.desc{
+  padding: 1vw;
+  font-size: 2vw;
+  font-family: 'Oswald', sans-serif;
+}
+.special{
+  font-family: 'Pacifico', cursive;
+}
+
+img{
+  margin: 2vw;
+  width : 22vw;
+  height : 15vw;
+  box-shadow: 1vw 1vw 1vw #652c2c;
+}
+
+#Search{
+  font-size: 3vw;
+  text-align: center;
+  padding: 1vw 4vw;
+  margin: 1vw 8vw;
+  box-shadow: 1vw 1vw 1vw #652c2c;
+  background-color: #f1d0d0;
+}
+
+#Search input{
+  margin: 1vw;
+  padding: 1vw;
+  font-size: 2vw;
+}
+
+#date{
+  padding: 2vw;
+  font-size: 2vw;
+  font-family: 'Oswald', sans-serif;
+}
+canvas{
+  display: none;
+}
+
+@media only screen and (max-width: 500px )
+{
+ .intro{
+   display: flex;
+   flex-direction: column-reverse;
+   /* justify-content: center; */
+   align-items: center;
+   margin: 1vw 5vw;
+   padding: 1vw 3vw;
+ } 
+ .desc, .tagline {
+   text-align: center;
+ }
+ img{
+   height: 30vw;
+   width: 40vw;
+ }
+}

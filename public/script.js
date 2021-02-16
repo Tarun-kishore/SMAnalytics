@@ -1,13 +1,13 @@
-let label = []
-let val = []
-let Symb, finalDate
-let max1 = 0, min1 = 100000;
 
 const searchInput = document.querySelector('.search');
 const date = document.querySelector('#date');
 searchInput.addEventListener('keyup', async function (e) {
 	if (e.key === 'Enter') {
-
+		let label = []
+		let val = []
+		let Symb, finalDate
+		let max1 = 0, min1 = 100000;
+		
 		await fetch('/search', {
 			method: 'POST',
 			headers: {
@@ -37,7 +37,7 @@ searchInput.addEventListener('keyup', async function (e) {
 				var temp2 = temp['3. Last Refreshed']
 				Symb = temp['2. Symbol']
 				finalDate = temp2.split(' ')[0]
-				date.innerHTML = `<h5>${finalDate}</h5>`
+				date.innerHTML = `<h5>Date of Analytics:${finalDate}</h5>`
 				if (!value.includes(finalDate)) continue
 				let a = value.split(' ')[1]
 				label.push('')
@@ -63,6 +63,7 @@ searchInput.addEventListener('keyup', async function (e) {
 		label.reverse()
 
 		var ctx = document.getElementById('myChart').getContext('2d');
+		document.getElementById('myChart').style.display = "block";
 		var chart = new Chart(ctx, {
 			type: 'line',
 

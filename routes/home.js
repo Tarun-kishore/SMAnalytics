@@ -12,7 +12,6 @@ router.get('/', (req,res) =>{
 })
 
 router.post('/search', async (reqq,ress) =>{
-    console.log(reqq.body)
     var req = unirest("GET", "https://alpha-vantage.p.rapidapi.com/query");
 
 req.query({
@@ -31,12 +30,7 @@ req.headers({
 
 
 req.end(function (res) {
-// 	if (res.error) throw new Error(res.error);
-//     // ress.render('home.pug',{
-//     //     data : res.body
-//     // }
-//     // )
-	// console.log(res.body['Time Series (30min)']);
+
     ress.json(res.body)
 });
 })

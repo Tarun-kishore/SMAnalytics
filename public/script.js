@@ -3,6 +3,8 @@ const searchInput = document.querySelector('.search');
 const date = document.querySelector('#date');
 searchInput.addEventListener('keyup', async function (e) {
 	if (e.key === 'Enter') {
+		const progress = document.getElementById('progress')
+		progress.innerHTML = "<h5>Loading</h5><progress></progress>"
 		let label = []
 		let val = []
 		let Symb, finalDate
@@ -64,6 +66,7 @@ searchInput.addEventListener('keyup', async function (e) {
 
 		var ctx = document.getElementById('myChart').getContext('2d');
 		document.getElementById('myChart').style.display = "block";
+		progress.innerHTML = ""
 		var chart = new Chart(ctx, {
 			type: 'line',
 

@@ -60,8 +60,10 @@ searchInput.addEventListener('keyup', async function (e) {
 			}
 		})
 
-		if (Symb === '') return
-
+		if (Symb === '') {
+			progress.innerHTML = "<h5> Error </h5>"
+			return
+		}
 		label.reverse()
 
 		var ctx = document.getElementById('myChart').getContext('2d');

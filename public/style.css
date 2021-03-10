@@ -4,14 +4,14 @@
   margin : 0;
   padding : 0;
 }
-body{
-  background-color: #dad0aa;
-}
 
 #navbar{
-  background-color: #ab8c8c;
+  /* background-color: #000000; */
   height:8vw;
 }
+/* body{
+  background-color: blue;
+} */
 #footer{
   position: relative;
   bottom: 0px;
@@ -27,7 +27,7 @@ body{
 }
 
 #navbar ul li a{
-  color: #942f2f;
+  color: #495aad;
   font-family: 'Ranchers', cursive;
   font-size: 5vw;
   text-decoration: none;
@@ -36,6 +36,46 @@ body{
 
 #navbar ul li {
   list-style: none;
+}
+#outer::before{
+  content: "";
+  background-color: black;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40vw;
+  width: 100%;
+}
+#banner{
+  height: 40vw ; 
+}
+#banner::before{
+  content: "";
+  background: url('./banner.jpg') center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 40vw;
+  width: 100vw;
+  opacity: 0.8;
+}
+#inner h3{
+  /* color: #000000; */
+  font-family:  cursive;
+  font-size: 4vw;
+  text-decoration: none;
+  margin-top: 15vw;
+  padding: 1vw 1vw;
+  text-align: center;
+
+}
+
+h3 strong{
+  color:blanchedalmond
 }
 
 #progress h5{
@@ -58,7 +98,7 @@ progress{
   padding: 1vw 4vw;
   margin: 2vw 8vw;
   box-shadow: 1vw 1vw 1vw #652c2c;
-  background-color: #f1d0d0;
+  background-color: #9fb1ca;
 }
 .tagline{
   padding: 1vw;
@@ -87,7 +127,7 @@ img{
   padding: 1vw 4vw;
   margin: 1vw 8vw;
   box-shadow: 1vw 1vw 1vw #652c2c;
-  background-color: #f1d0d0;
+  background-color: #9fb1ca;
 }
 
 #Search input{
@@ -111,9 +151,10 @@ canvas{
    display: flex;
    flex-direction: column-reverse;
    /* justify-content: center; */
+   width: 89vw;
+    padding: 1vw 4vw;
+    margin: 2vw 1vw;
    align-items: center;
-   margin: 1vw 5vw;
-   padding: 1vw 3vw;
  } 
  .desc, .tagline {
    text-align: center;

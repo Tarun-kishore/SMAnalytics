@@ -2,7 +2,17 @@ extends layout.pug
 block style
     link(rel="stylesheet", href="style.css")
 block content
-
+    #outer
+        #banner
+            nav#navbar
+                    ul
+                        li
+                            a(href='/') SMAnalytics
+            #inner
+                #tagline 
+                    h3 
+                        strong Analysise St
+                        |ocks here
     #Search 
         h5 Enter Code and Press Enter
         input.search(name="code" type='text' placeholder='Equity code')
@@ -14,7 +24,7 @@ block content
     .intro 
         .text 
             h5.tagline What is SMAnalytics?
-            p.desc SMAnalytics is a web app which tracks analytics of stock market 
+            p.desc SMAnalytics is a web app which tracks analytics of New Yort Stock Exchange 
         .image 
             img(src="card 1.jpg", alt="image")
 

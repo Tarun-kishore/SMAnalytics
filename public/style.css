@@ -95,9 +95,10 @@ progress{
 .intro{
   display: grid;
   grid-template-columns: 3fr 1fr ;
+  width: 89vw;
   padding: 1vw 4vw;
-  margin: 2vw 8vw;
-  box-shadow: 1vw 1vw 1vw #652c2c;
+  margin: 2vw 1vw;
+box-shadow: 1vw 1vw 1vw #652c2c;
   background-color: #9fb1ca;
 }
 .tagline{
@@ -124,8 +125,9 @@ img{
 #Search{
   font-size: 3vw;
   text-align: center;
+  width: 89vw;
   padding: 1vw 4vw;
-  margin: 1vw 8vw;
+  margin: 2vw 1vw;
   box-shadow: 1vw 1vw 1vw #652c2c;
   background-color: #9fb1ca;
 }
